@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StringAlphabeticOrder</title>
+    <script type="text/javascript">
+        function alphabet(str){
+            let words = str.split(' ');
+            words.sort();
+            words.join();
+            alert("These are arranged "+words);
+        }
+    </script>
+</head>
+<body>
+    Enter The String: <input type="text" name="Str" id="str">
+    <button onclick="alphabet(document.getElementById('str').value)">Click to Order</button>
+</body>
+</html>

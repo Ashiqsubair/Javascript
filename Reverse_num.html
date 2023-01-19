@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reversing a number</title>
+    <script>
+        numb=parseInt(prompt("Enter a number to reverse"));
+        temp=0;
+        while(numb!=0){
+            temp=(temp)*10;
+            temp=(temp)+((numb)%10);
+            numb=parseInt((numb)/10);
+        }
+        alert("After reversing the number is "+temp);
+    </script>
+</head>
+<body>
+</body>
+</html>

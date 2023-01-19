@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<body>
+    <script>
+        let s=prompt('Enter the String');
+        let len,i,count=0;
+        let r = s.toUpperCase();
+        var ar = [];
+        ar = r.split("");
+        len=ar.length;
+        for(i=0;i<len;i++){
+            if(ar[i]=='A'){
+                count++;
+            }
+            else if(ar[i]=='E'){
+                count++;
+            }
+            else if(ar[i]=='I'){
+                count++;
+            }
+            else if(ar[i]=='O'){
+                count++;
+            }
+            else if(ar[i]=='U'){
+                count++;
+            }
+        }
+        alert('Vowel Count:'+`${count}`);
+        console.log(count);
+    </script>
+</body>
+
+
+</html>

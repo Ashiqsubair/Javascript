@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<body>
+    <div class="calcMainDiv">
+        <form style="text-align: center;">
+            <input type="text" width="5cm" id="textBoxId" style="width: 7cm;height: 1.5cm;border-radius: 10px;"></text><br><br>
+
+            <button onclick="test(1)" class="btnStyle">1</button>
+            <button onclick="test(2)" class="btnStyle">2</button>
+            <button onclick="test(3)" class="btnStyle">3</button><br><br>
+
+            <button onclick="test(4)" class="btnStyle">4</button>
+            <button onclick="test(5)" class="btnStyle">5</button>
+            <button onclick="test(6)" class="btnStyle">6</button><br><br>
+
+            <button onclick="test(7)" class="btnStyle">7</button>
+            <button onclick="test(8)" class="btnStyle">8</button>
+            <button onclick="test(9)" class="btnStyle">9</button><br><br>
+
+            <button onclick="" class="btnStyle" >AC</button>
+            <button onclick="test(0)" class="btnStyle">0</button>  
+            <button onclick="reverse()" class="btnStyle" style="width: 2.1cm;">PROCESS</button>          
+
+        </form>
+    </div>
+</body>
+<script>
+let Num1;
+let rev=0;
+let rem;
+
+function test(n){
+        if(document.getElementById("textBoxId").value!=null){
+            Num1=document.getElementById("textBoxId").value;
+            Num1=Num1*10+n;
+            document.getElementById("textBoxId").value=Num1;
+            event.preventDefault(); 
+        }else if(document.getElementById("textBoxId").value==0 && document.getElementById("textBoxId").value!='.'){
+            document.getElementById("textBoxId").value=n;
+            event.preventDefault(); 
+        }else{
+            document.getElementById("textBoxId").value=n;
+            event.preventDefault();  
+        }
+}
+function reverse(){
+    console.log(Num1);
+    event.preventDefault()
+    while(Num1>0){
+        rem=Num1%10;
+        rev=rev*10+rem;
+        Num1=Math.floor(Num1/10);
+        alert(Num1);
+    }
+    console.log(rev);
+    document.getElementById("textBoxId").value=rev;
+}
+
+</script>
+<style>
+    .calcMainDiv{
+        background-color: antiquewhite;
+        width: 8cm;
+        height: 8cm;
+        padding: 1cm;
+        margin: 6cm;
+    }
+
+    .btnStyle{
+        width: 1.7cm;
+        height: 1cm;
+        border-radius: 5px;
+    }
+</style>
+</html>
